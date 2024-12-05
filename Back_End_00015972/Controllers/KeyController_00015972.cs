@@ -23,25 +23,13 @@ namespace Back_End_00015972.Controllers
             return Ok(keys);
         }
 
-        // GET: api/Key/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<KeyItem_00015972>> GetKey(int id)
-        {
-            var key = await _repository.GetKeyByIdAsync(id);
-            if (key == null)
-            {
-                return NotFound();
-            }
-            return Ok(key);
-        }
-
         // POST: api/Key
         [HttpPost]
         public async Task<ActionResult> CreateKey(KeyItem_00015972 key)
         {
             await _repository.AddKeyAsync(key);
             await _repository.SaveAsync();
-            return CreatedAtAction(nameof(GetKey), new { id = key.Id }, key);
+            return CreatedAtAction(nameof(GetKeys), new { id = key.Id }, key);
         }
 
         // PUT: api/Key/5

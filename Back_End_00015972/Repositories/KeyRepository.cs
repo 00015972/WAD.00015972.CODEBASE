@@ -18,11 +18,6 @@ namespace Back_End_00015972.Repositories
             return await _context.KeyItems.ToListAsync();
         }
 
-        public async Task<KeyItem_00015972?> GetKeyByIdAsync(int id)
-        {
-            return await _context.KeyItems.FindAsync(id);
-        }
-
         public async Task AddKeyAsync(KeyItem_00015972 key)
         {
             await _context.KeyItems.AddAsync(key);
