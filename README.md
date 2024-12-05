@@ -2,6 +2,8 @@
 
 # Key Store Application API
 
+I divided 15972 by 20 and got remainder 12. My topic is 12th (Key Store Application).
+
 It is a simple RESTful API for managing key-value pairs in a key store using ASP.NET Core Web API (version 6.0). The project demonstrates the use of the **Repository Pattern** for better code organization and maintainability.
 
 ---
